@@ -13,5 +13,11 @@ This app is powered by pure HTML/JS/CSS. It imports all Mash elements in the hea
 To connect to your Mash account to receive payments for your own custom Dino Game, make sure to create your own Mash Earner Account [here](https://wallet.getmash.com/earn/home) and use your own Mash Earner ID when initializing the game (See function onDocumentLoad()). Not sure how to get the earner ID or price category tag? Visit [the Mash Platform web app](https://wallet.getmash.com/earn/home) to start earning.
 
 ## Want to see more?
+Check out our other demos and learn more about what can be done with Mash by 
+visiting our [overview page on Replit](https://replit.com/@getmash/Mash-Monetization-Overview?v=1).
 
-Check out the other Replit demos we have [here](https://replit.com/@getmash/Mash-lessgreater-Replit)!
+**Other repls**:
+
+- [Stable Diffusion AI Art Generator with Mash](https://replit.com/@getmash/Stable-Diffusion-AI-Art-Generator-with-Mash?v=1)
+- [The Dino Game w/ Santa Christmas Extension & Monetization](https://replit.com/@getmash/The-Dino-Game-with-Santa-Christmas-Extension-and-Monetization?v=1)
+- [Donation & Profile / Link-in-Bio Replacement Site](https://replit.com/@getmash/Donation-and-Profile-Link-in-Bio-Replacement-Site?v=1)
