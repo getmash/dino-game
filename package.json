@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@getmash/client-sdk": "^2.1.5"
+  }
+}

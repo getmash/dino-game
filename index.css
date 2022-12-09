@@ -7,6 +7,8 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .icon {
@@ -32,28 +34,38 @@ html, body {
   font-size: 1em;
   line-height: 1.55;
   margin: 0 auto;
-  max-width: 600px;
-  padding-top: 100px;
+  max-width: 632.5px;
   width: 100%;
 }
 
 .offline .runner-container {
-  height: 150px;
-  max-width: 600px;
+  height: 182.5px;
+  width: 100%;
+  max-width: 672.5px;
   overflow: hidden;
   position: absolute;
-  top: 35px;
-  width: 44px;
+  top: 75px;
 }
 
 .offline .runner-canvas {
   height: 150px;
   max-width: 600px;
+  background-color: #1D1E21;
   opacity: 1;
   overflow: hidden;
   position: absolute;
+  border-top: 16.25px solid #F092C0;
+  border-left: 16.25px solid #3599A0;
+  border-right: 16.25px solid #3599A0;
+  border-bottom: 16.25px solid #F092C0;
   top: 0;
   z-index: 2;
+}
+
+@media (max-width: 632.5px) {
+  .offline .runner-canvas {
+    max-width: window.innerWidth;
+  }
 }
 
 .offline .controller {
@@ -70,67 +82,276 @@ html, body {
   display: none;
 }
 
-@media (max-width: 420px) {
-  .suggested-left > #control-buttons, .suggested-right > #control-buttons {
-    float: none;
+#play-again-button {
+  box-sizing: border-box;
+  width: 289px;
+  height: 69px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 10px 20px 0;
+  min-width: 290px;
+  background: #3599A0;
+  border: 5px solid #0B585E;
+  box-shadow: 0px 3.0303px 0px rgba(122, 114, 85, 0.5);
+  border-radius: 10px;
+  cursor: pointer; 
+}
+
+#play-again-button:enabled:active {
+    background: #2b7c82;
+}
+
+#pole {
+  width: 7px;
+  height: 38px;
+  left: 61px;
+  top: 373px;
+  
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+#play-again-text {
+  font-family: 'BarcadeNoBarBold';
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #FCF7E5;
+  padding: 0px;
+  border: none;  
+}
+
+#character-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 10px;
+  border-radius: 100%;
+  box-shadow: 0px 3.0303px 0px rgba(122, 114, 85, 0.5);
+}
+
+#character-circle:active {
+  opacity: 50%;
+}
+
+#container {
+  width: 100%;
+  max-width: 700px;
+  background: #FCF7E5;
+  box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 700px;
+  background: #FFFFFF;
+  border-top: 1px solid #B24B7E;
+  border-radius: 0 0 20px 20px;
+}
+
+#outlined-mash-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 154px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #BBAFCA;
+  border-radius: 10px;
+  color: #4E4760;
+  font-family: 'Poppins';
+  margin: 0 5px;
+}
+
+#outlined-mash-button:active {
+  opacity: 50%;
+}
+
+#pink-mash-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 154px;
+  height: 40px;
+  background: #DD87DA;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins';
+  margin: 0 5px;
+}
+
+#pink-mash-button:active {
+  opacity: 50%;
+}
+
+#mash-logo {
+  margin-right: 5px;
+}
+
+a:link { text-decoration: none; }
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(255, 185, 0);
+  border-color: rgb(255, 185, 0) transparent rgb(255, 185, 0) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  .snackbar {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0;
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
   }
 }
 
-@media (max-height: 350px) {
-  h1 {
-    margin: 0 0 15px;
+.fade-in {
+  animation: fadeIn infinite alternate ease 1s;
+  color: white;
+  z-index: 1000;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  top: 127.5px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  .icon-offline {
-    margin: 0 0 10px;
-  }
-  .interstitial-wrapper {
-    margin-top: 5%;
-  }
-  .nav-wrapper {
-    margin-top: 30px;
+  100% {
+    opacity: 1;
   }
 }
 
-@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
-  .offline .interstitial-wrapper {
-    margin-left: 0;
-    margin-right: 0;
-  }
+@font-face {
+    font-family: Poppins;
+    color: #404040;
+    src: url("./assets/Poppins-Regular.otf") format("opentype");
 }
 
-@media (min-width: 420px) and (max-width: 736px) and (min-height: 240px) and (max-height: 420px) and (orientation:landscape) {
-  .interstitial-wrapper {
-    margin-bottom: 100px;
-  }
+@font-face {
+    font-family: BarcadeNoBarBold;
+    color: #404040;
+    src: url("./assets/BarcadeNoBarBold.otf") format("opentype");
 }
 
-@media (min-height: 240px) and (orientation: landscape) {
-  .offline .interstitial-wrapper {
-    margin-bottom: 90px;
-  }
-  .icon-offline {
-    margin-bottom: 20px;
-  }
+.poppinsFont {
+  font-family: Poppins;
+  color: #404040;
 }
 
-@media (max-height: 320px) and (orientation: landscape) {
-  .icon-offline {
-    margin-bottom: 0;
-  }
-  .offline .runner-container {
-    top: 10px;
-  }
+.barcadeFont {
+  font-family: BardaceNoBarBold;
+  color: #404040;
 }
 
-@media (max-width: 240px) {
-  .interstitial-wrapper {
-    overflow: inherit;
-    padding: 0 8px;
-  }
+#info-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  box-sizing: border-box;
+  max-width: 632.5px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#hr {
+  max-width: 632.5px;
+  width: 100%;
+  height: 2px;
+  background-color: #DCCDE4;
+  display: flex;
+  align-self: center;
+  margin: 20px 0;
+}
+
+#create-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 6px;
+  width: 222px;
+  height: 40px;
+  background: #DD87DA;
+  border-radius: 10px;
+}
+
+#lightningAddress {
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+  
+  max-width: 501px;
+  background: #FFFFFF;
+  border: 1px solid #EDE4F2;
+  border-radius: 10px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#middleContainer {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  box-sizing: border-box;
+  max-width: 632.5px; 
+  margin-top: 242px; 
+}
+
+#copy-icon:active {
+  opacity: 50%;
+}
+
+#donate-button:active {
+  opacity: 50%;
 }
